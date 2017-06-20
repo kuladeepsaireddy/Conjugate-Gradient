@@ -1,0 +1,957 @@
+
+*** Running vivado
+    with args -log ephsilon_mult.vds -m64 -mode batch -messageDb vivado.pb -notrace -source ephsilon_mult.tcl
+
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source ephsilon_mult.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/array_arith/proj_array_arith/solution1/impl/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'ephsilon_mult' generated file not found 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ephsilon_mult' generated file not found 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ephsilon_mult' generated file not found 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ephsilon_mult' generated file not found 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ephsilon_mult' generated file not found 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult_sim_netlist.vhdl'. Please regenerate to continue.
+Command: synth_design -top ephsilon_mult -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 304.688 ; gain = 132.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ephsilon_mult' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/synth/ephsilon_mult.vhd:74]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_1' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:91666' bound to instance 'U0' of component 'floating_point_v7_1_1' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/synth/ephsilon_mult.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'floating_point_v7_1_1' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:91783]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:89969' bound to instance 'i_synth' of component 'floating_point_v7_1_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:91792]
+INFO: [Synth 8-638] synthesizing module 'floating_point_v7_1_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:90098]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:7036]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:12443]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:7125]
+INFO: [Synth 8-3919] null assignment ignored [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:90424]
+INFO: [Synth 8-3919] null assignment ignored [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:90424]
+INFO: [Synth 8-638] synthesizing module 'axi_slave_2to1' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:3270]
+INFO: [Synth 8-256] done synthesizing module 'axi_slave_2to1' (1#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:3270]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv' (2#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'flt_mult' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:51081]
+INFO: [Synth 8-638] synthesizing module 'fix_mult' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:48932]
+INFO: [Synth 8-638] synthesizing module 'fix_mult_xx' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:48664]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_10_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:20781]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:862]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:863]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:870]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:884]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:891]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:901]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:910]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:932]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:939]
+INFO: [Synth 8-638] synthesizing module 'hybrid' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:12708]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:12739]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1546]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1554]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1614]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1622]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1642]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1643]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1651]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1692]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1694]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1761]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1763]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1820]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1833]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1876]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1877]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1878]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1879]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1932]
+INFO: [Synth 8-3919] null assignment ignored [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:13261]
+INFO: [Synth 8-3919] null assignment ignored [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:13262]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:13266]
+INFO: [Synth 8-638] synthesizing module 'op_resize' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4028]
+INFO: [Synth 8-256] done synthesizing module 'op_resize' (3#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4028]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:13337]
+INFO: [Synth 8-638] synthesizing module 'delay_line' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line' (4#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized0' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized0' (4#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_10_luts' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4698]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4909]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4909]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4909]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4909]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4909]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5130]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5181]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5182]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5183]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5184]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5185]
+INFO: [Synth 8-638] synthesizing module 'op_resize__parameterized0' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4028]
+INFO: [Synth 8-256] done synthesizing module 'op_resize__parameterized0' (4#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4028]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5316]
+INFO: [Synth 8-113] binding component instance 'muxcy00' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5321]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5327]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5359]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5316]
+INFO: [Synth 8-113] binding component instance 'muxcy00' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5321]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5327]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Synth 8-113] binding component instance 'ma0' to cell 'MULT_AND' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5337]
+INFO: [Synth 8-113] binding component instance 'muxcy0' to cell 'MUXCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5342]
+INFO: [Synth 8-113] binding component instance 'xorcy0' to cell 'XORCY' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5348]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_10_luts' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4698]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized1' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized1' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized2' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized2' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized3' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized3' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'dsp' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:9916]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1374]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1466]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1467]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1469]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1470]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1484]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1485]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1487]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1488]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1466]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1467]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1469]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1470]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1484]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1485]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1487]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1488]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1399]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1400]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:1450]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:8892]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:8913]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:8709]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:8730]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:10114]
+INFO: [Synth 8-638] synthesizing module 'op_resize__parameterized1' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4028]
+INFO: [Synth 8-256] done synthesizing module 'op_resize__parameterized1' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4028]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized4' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized4' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized5' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized5' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized6' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized6' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized7' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized7' (5#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'dsp' (6#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:9916]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized8' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized8' (6#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized9' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized9' (6#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized10' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized10' (6#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4160]
+INFO: [Synth 8-256] done synthesizing module 'hybrid' (7#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:12708]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_10_viv' (8#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:20781]
+INFO: [Synth 8-638] synthesizing module 'delay' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized1' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized1' (8#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay' (9#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized0' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized3' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized3' (9#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized0' (9#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'fix_mult_xx' (10#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:48664]
+INFO: [Synth 8-256] done synthesizing module 'fix_mult' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:48932]
+INFO: [Synth 8-638] synthesizing module 'flt_mult_exp' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:50339]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized1' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized5' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized5' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized1' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized2' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized7' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized7' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized2' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'carry_chain' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized3' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized9' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized9' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized3' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized4' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized11' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized11' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized4' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized5' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized13' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized13' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized5' (11#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'carry_chain' (12#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'special_detect' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:29412]
+INFO: [Synth 8-638] synthesizing module 'compare_eq_im' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28697]
+INFO: [Synth 8-638] synthesizing module 'carry_chain__parameterized0' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized6' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized15' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized15' (12#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized6' (12#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized7' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized17' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized17' (12#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized7' (12#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'carry_chain__parameterized0' (12#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+WARNING: [Synth 8-3848] Net CARRYS_OUT in module/entity compare_eq_im does not have driver. [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28692]
+INFO: [Synth 8-256] done synthesizing module 'compare_eq_im' (13#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28697]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized8' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized19' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized19' (13#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized8' (13#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized9' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized21' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized21' (13#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized9' (13#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'special_detect' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:29412]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized10' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized23' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized23' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized10' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized11' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized25' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized25' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized11' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized12' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized27' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:597]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized27' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized12' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized13' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized29' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_utils_v3_0_5/hdl/xbip_utils_v3_0_vh_rfs.vhd:594]
+INFO: [Common 17-14] Message 'Synth 8-312' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized29' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized13' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized14' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized31' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized31' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized14' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized15' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized33' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized33' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized15' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized16' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized35' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized35' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized16' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized17' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized37' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized37' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized17' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized18' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized39' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized39' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized18' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized19' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized41' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized41' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized19' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized20' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized43' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized43' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized20' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized21' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized45' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized45' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized21' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized22' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized47' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized47' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized22' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized23' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized49' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized49' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized23' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized24' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized51' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized51' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized24' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized25' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized53' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized53' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized25' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized26' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized55' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized55' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized26' (14#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'flt_mult_exp' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:50339]
+INFO: [Synth 8-638] synthesizing module 'flt_mult_round' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:50036]
+INFO: [Synth 8-638] synthesizing module 'renorm_and_round_logic' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:35412]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized27' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized57' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized57' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized27' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized28' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized59' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized59' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized28' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized29' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized61' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized61' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized29' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized30' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized63' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized63' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized30' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized31' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized65' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized65' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized31' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized32' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized67' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized67' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized32' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized33' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized69' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized69' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized33' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized34' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized71' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized71' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized34' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized35' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized73' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized73' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized35' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized36' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized75' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized75' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized36' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized37' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized77' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized77' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized37' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized38' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized79' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized79' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized38' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized39' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized81' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized81' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized39' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized40' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized83' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized83' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized40' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized41' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized85' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized85' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized41' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized42' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized87' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized87' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized42' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized43' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized89' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized89' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized43' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized44' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized91' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized91' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized44' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized45' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized93' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized93' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized45' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'flt_round_bit' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:34967]
+INFO: [Synth 8-638] synthesizing module 'carry_chain__parameterized1' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized46' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized95' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized95' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized46' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'carry_chain__parameterized1' (15#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-256] done synthesizing module 'flt_round_bit' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:34967]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized47' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized97' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized97' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized47' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'carry_chain__parameterized2' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized48' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized99' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized99' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized48' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized49' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized101' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized101' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized49' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized50' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized103' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized103' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized50' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'carry_chain__parameterized2' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'carry_chain__parameterized3' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized51' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized105' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized105' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized51' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized52' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized107' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized107' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized52' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized53' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized109' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized109' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized53' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'carry_chain__parameterized3' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'carry_chain__parameterized4' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized54' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized111' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized111' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized54' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-256] done synthesizing module 'carry_chain__parameterized4' (16#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:28059]
+INFO: [Synth 8-256] done synthesizing module 'renorm_and_round_logic' (17#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:35412]
+INFO: [Synth 8-256] done synthesizing module 'flt_mult_round' (18#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:50036]
+INFO: [Synth 8-638] synthesizing module 'flt_dec_op_lat' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:31407]
+INFO: [Synth 8-256] done synthesizing module 'flt_dec_op_lat' (19#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:31407]
+INFO: [Synth 8-256] done synthesizing module 'flt_mult' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:51081]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized55' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized113' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized113' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized55' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized56' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized115' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized115' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized56' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized57' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized117' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized117' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized57' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized58' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized119' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized119' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized58' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized59' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized121' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized121' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized59' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized60' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized123' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized123' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized60' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized61' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_1_viv' declared at 'd:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:284' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_1_viv' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27476]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized125' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_1_viv__parameterized125' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/xbip_pipe_v3_0_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized61' (20#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:27456]
+WARNING: [Synth 8-5639] ignoring null variable initialization [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:13691]
+WARNING: [Synth 8-3848] Net m_axis_result_tuser_not_abs in module/entity floating_point_v7_1_1_viv does not have driver. [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:90443]
+WARNING: [Synth 8-3848] Net m_axis_result_tlast_not_abs in module/entity floating_point_v7_1_1_viv does not have driver. [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:90445]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_v7_1_1_viv' (21#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:90098]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_v7_1_1' (22#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/floating_point_v7_1_1/hdl/floating_point_v7_1_vh_rfs.vhd:91783]
+INFO: [Synth 8-256] done synthesizing module 'ephsilon_mult' (23#1) [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/synth/ephsilon_mult.vhd:74]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 381.680 ; gain = 209.773
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 381.680 ; gain = 209.773
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 325 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/mygit/CG_Project/project_cg/project_cg.runs/ephsilon_mult_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/mygit/CG_Project/project_cg/project_cg.runs/ephsilon_mult_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 79 instances were transformed.
+  FDE => FDRE: 4 instances
+  MULT_AND => LUT2: 75 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 573.313 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 573.313 ; gain = 401.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 573.313 ; gain = 401.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 573.313 ; gain = 401.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "zero_detect_i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 573.313 ; gain = 401.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 573.313 ; gain = 401.406
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.pp_gen_pipeline.pp_gen_loop[0].b_is_odd.ai_reg_loop[25].ai_reg_reg[25:25]' into 'gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.pp_gen_pipeline.pp_gen_loop[0].b_is_odd.ai_reg_loop[24].ai_reg_reg[24:24]' [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:5385]
+INFO: [Synth 8-5546] ROM "gDSP.gHYBRID.iHYBRID/zero_detect_i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 573.313 ; gain = 401.406
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 573.313 ; gain = 401.406
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[8] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[10] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[9] ' (FDE) to 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[11] ' (FDE) to 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[5] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[12] ' (FDE) to 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[13] ' (FDE) to 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[1] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[1] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[1] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[2] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[2] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[3] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[3] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[4] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[4] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[5] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[5] ' (FDE) to 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[6] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[6] ' (FDE) to 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] ' (FDE) to 'U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[13] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[12] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[11] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[9] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[8] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[10] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[1] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[2] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[3] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[4] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[5] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL/i_pipe/opt_has_pipe.first_q_reg[6] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3332] Sequential element (\MULT.OP/EXP/STATE_DEC_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] ) is unused and will be removed from module floating_point_v7_1_1_viv.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\MULT.OP/MULT/MULT_GEN_VARIANT.FIX_MULT/MULT /\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.pp_gen_pipeline.pp_gen_loop[0].b_is_odd.ai_reg_loop[24].ai_reg_reg[24] )
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/MULT/MULT_GEN_VARIANT.FIX_MULT/MULT /\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[0][33] ' (FDRE) to 'U0/i_synth/\MULT.OP/MULT/MULT_GEN_VARIANT.FIX_MULT/MULT /\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[0][28] '
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/\MULT.OP/MULT/MULT_GEN_VARIANT.FIX_MULT/MULT /\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[1][28] ' (FDRE) to 'U0/i_synth/\MULT.OP/MULT/MULT_GEN_VARIANT.FIX_MULT/MULT /\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[0][28] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\MULT.OP/MULT/MULT_GEN_VARIANT.FIX_MULT/MULT /\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[0][28] )
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.bypass_delay/dN_hlutnm.srl_loop[0].i_fdre0 ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.bypass_delay/dN_hlutnm.srl_loop[0].i_fdre1 ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.bypass_delay/dN_hlutnm.srl_loop[1].i_fdre0 ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.bypass_delay/dN_hlutnm.srl_loop[1].i_fdre1 ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.bypass_delay/dN_hlutnm.srl_loop[2].i_fdre0 ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.bypass_delay/dN_hlutnm.srl_loop[2].i_fdre1 ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.bypass_delay/dN_hlutnm.runt_srl_loop.i_fdre ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.pp_gen_pipeline.pp_gen_loop[0].b_is_odd.ai_reg_loop[24].ai_reg_reg[24] ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[0][32] ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[0][31] ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[0][28] ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[0][33] ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+INFO: [Synth 8-3332] Sequential element (\gDSP.gHYBRID.iHYBRID/one_fabric_mult.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[1][28] ) is unused and will be removed from module mult_gen_v12_0_10_viv.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:12 . Memory (MB): peak = 573.715 ; gain = 401.809
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:05 ; elapsed = 00:01:12 . Memory (MB): peak = 573.715 ; gain = 401.809
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:29 . Memory (MB): peak = 658.770 ; gain = 486.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:29 . Memory (MB): peak = 670.844 ; gain = 498.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:01:30 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:22 ; elapsed = 00:01:30 . Memory (MB): peak = 679.953 ; gain = 508.047
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:22 ; elapsed = 00:01:30 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    21|
+|2     |DSP48E1  |     1|
+|3     |LUT1     |     9|
+|4     |LUT2     |    96|
+|5     |LUT3     |   118|
+|6     |LUT4     |    78|
+|7     |LUT5     |    14|
+|8     |LUT6     |    27|
+|9     |MULT_AND |    75|
+|10    |MUXCY    |   125|
+|11    |SRL16E   |    17|
+|12    |XORCY    |   120|
+|13    |FDE      |     4|
+|14    |FDRE     |   500|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 679.953 ; gain = 508.047
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:01:18 . Memory (MB): peak = 679.953 ; gain = 265.000
+Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 679.953 ; gain = 508.047
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 346 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/ip/ephsilon_mult/ephsilon_mult_ooc.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 114 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 35 instances
+  FDE => FDRE: 4 instances
+  MULT_AND => LUT2: 75 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+587 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 679.953 ; gain = 458.367
+INFO: [Coretcl 2-1174] Renamed 70 cell refs.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 679.953 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 19 11:22:33 2017...

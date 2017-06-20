@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Jun 12 11:09:51 2017
+# Process ID: 12584
+# Current directory: D:/mygit/CG_Project/project_cg/project_cg.runs/synth_2
+# Command line: vivado.exe -log vector_by_vector.vds -mode batch -messageDb vivado.pb -notrace -source vector_by_vector.tcl
+# Log file: D:/mygit/CG_Project/project_cg/project_cg.runs/synth_2/vector_by_vector.vds
+# Journal file: D:/mygit/CG_Project/project_cg/project_cg.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source vector_by_vector.tcl -notrace

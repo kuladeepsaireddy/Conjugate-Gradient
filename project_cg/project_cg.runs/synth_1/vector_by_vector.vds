@@ -1,0 +1,405 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Tue Jun 06 18:48:24 2017
+# Process ID: 15312
+# Current directory: D:/mygit/CG_Project/project_cg/project_cg.runs/synth_1
+# Command line: vivado.exe -log vector_by_vector.vds -mode batch -messageDb vivado.pb -notrace -source vector_by_vector.tcl
+# Log file: D:/mygit/CG_Project/project_cg/project_cg.runs/synth_1/vector_by_vector.vds
+# Journal file: D:/mygit/CG_Project/project_cg/project_cg.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source vector_by_vector.tcl -notrace
+Command: synth_design -top vector_by_vector -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 280.617 ; gain = 108.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vector_by_vector' [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:4]
+	Parameter numloop bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'my_mult' [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_multiplier.v:1]
+INFO: [Synth 8-256] done synthesizing module 'my_mult' (1#1) [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_multiplier.v:1]
+INFO: [Synth 8-638] synthesizing module 'adder' [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_adder.v:1]
+INFO: [Synth 8-256] done synthesizing module 'adder' (2#1) [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_adder.v:1]
+WARNING: [Synth 8-324] index 24 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:98]
+WARNING: [Synth 8-324] index 25 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:99]
+WARNING: [Synth 8-324] index 26 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:107]
+WARNING: [Synth 8-324] index 27 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:108]
+WARNING: [Synth 8-324] index 28 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:107]
+WARNING: [Synth 8-324] index 29 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:108]
+WARNING: [Synth 8-324] index 30 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:107]
+WARNING: [Synth 8-324] index 31 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:108]
+WARNING: [Synth 8-324] index 24 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:98]
+WARNING: [Synth 8-324] index 25 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:99]
+WARNING: [Synth 8-324] index 26 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:107]
+WARNING: [Synth 8-324] index 27 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:108]
+WARNING: [Synth 8-324] index 40 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:98]
+WARNING: [Synth 8-324] index 41 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:99]
+WARNING: [Synth 8-324] index 24 out of range [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:100]
+WARNING: [Synth 8-3848] Net o_data[22] in module/entity vector_by_vector does not have driver. [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:11]
+INFO: [Synth 8-256] done synthesizing module 'vector_by_vector' (3#1) [D:/mygit/CG_Project/project_cg/project_cg.srcs/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v:4]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 317.953 ; gain = 146.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 317.953 ; gain = 146.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 317.953 ; gain = 146.316
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 349.609 ; gain = 177.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance '\xs[1].zs[0].instnce.my_adder_instance ' (adder) to '\xs[1].zs[2].instnce.my_adder_instance '
+INFO: [Synth 8-223] decloning instance '\xs[1].zs[0].instnce.my_adder_instance ' (adder) to '\xs[1].zs[4].instnce.my_adder_instance '
+INFO: [Synth 8-223] decloning instance '\xs[1].zs[0].instnce.my_adder_instance ' (adder) to '\xs[1].zs[6].instnce.my_adder_instance '
+INFO: [Synth 8-223] decloning instance '\xs[1].zs[0].instnce.my_adder_instance ' (adder) to '\xs[2].zs[0].instnce.my_adder_instance '
+INFO: [Synth 8-223] decloning instance '\xs[1].zs[0].instnce.my_adder_instance ' (adder) to '\xs[2].zs[2].instnce.my_adder_instance '
+INFO: [Synth 8-223] decloning instance '\xs[1].zs[0].instnce.my_adder_instance ' (adder) to '\xs[3].zs[0].instnce.my_adder_instance '
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
++---Registers : 
+	               32 Bit    Registers := 18    
++---Multipliers : 
+	                32x32  Multipliers := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vector_by_vector 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
++---Registers : 
+	               32 Bit    Registers := 18    
+Module my_mult 
+Detailed RTL Component Info : 
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[255]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[254]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[253]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[252]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[251]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[250]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[249]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[248]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[247]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[246]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[245]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[244]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[243]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[242]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[241]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[240]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[239]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[238]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[237]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[236]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[235]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[234]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[233]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[232]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[231]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[230]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[229]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[228]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[227]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[226]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[225]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[224]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[223]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[222]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[221]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[220]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[219]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[218]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[217]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[216]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[215]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[214]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[213]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[212]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[211]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[210]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[209]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[208]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[207]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[206]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[205]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[204]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[203]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[202]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[201]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[200]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[199]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[198]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[197]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[196]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[195]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[194]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[193]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[192]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[191]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[190]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[189]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[188]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[187]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[186]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[185]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[184]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[183]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[182]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[181]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[180]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[179]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[178]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[177]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[176]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[175]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[174]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[173]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[172]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[171]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[170]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[169]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[168]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[167]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[166]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[165]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[164]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[163]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[162]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[161]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[160]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[159]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[158]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[157]
+WARNING: [Synth 8-3331] design vector_by_vector has unconnected port vect_A[156]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[31] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[30] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[29] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[28] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[27] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[26] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[25] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[24] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[23] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[22] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[21] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[20] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[19] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[18] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[17] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[16] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[15] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[14] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[13] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[12] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[11] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[10] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[9] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[8] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[7] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[6] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[5] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[4] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[3] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[2] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[1] ) is unused and will be removed from module vector_by_vector.
+WARNING: [Synth 8-3332] Sequential element (\main_o_data_reg[0] ) is unused and will be removed from module vector_by_vector.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    32|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    32|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 587.313 ; gain = 415.676
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 561 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 587.313 ; gain = 375.883
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 587.313 ; gain = 415.676
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 148 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 653.832 ; gain = 454.605
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 653.832 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 06 18:49:00 2017...

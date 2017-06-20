@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_2" LaunchPart="xc7z020clg484-1" LaunchTime="1497969590">
+  <File Type="RDS-DCP" Name="cg_top.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_2/constrs_in.xml"/>
+  <File Type="RDS-UTIL-PB" Name="cg_top_utilization_synth.pb"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_2/sources.xml"/>
+  <File Type="RDS-PROPCONSTRS" Name="cg_top_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="cg_top.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_2/synth_2.psg"/>
+  <File Type="RDS-RDS" Name="cg_top.vds"/>
+  <File Type="RDS-UTIL" Name="cg_top_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="cg_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="cg_top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Summer Internship IIIT-H/cg_adder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Sai/Desktop/Summer Internship IIIT-H/cg_adder.v"/>
+        <Attr Name="ImportTime" Val="1496392688"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Summer Internship IIIT-H/cg_multiplier.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Sai/Desktop/Summer Internship IIIT-H/cg_multiplier.v"/>
+        <Attr Name="ImportTime" Val="1496392714"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cg_vector_subtractor.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Summer Internship IIIT-H/cg_scalar_mult.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Sai/Desktop/Summer Internship IIIT-H/cg_scalar_mult.v"/>
+        <Attr Name="ImportTime" Val="1497262485"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cg_scalar_division.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cg_scalar_adder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Summer Internship IIIT-H/cg_vect_multiplier.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/Sai/Desktop/Summer Internship IIIT-H/cg_vect_multiplier.v"/>
+        <Attr Name="ImportTime" Val="1496730329"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cg_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="cg_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="floating_point_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="floating_point_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_matrix_A"/>
+  <BlockFileSet Type="BlockSrcs" Name="vect_float_sub"/>
+  <BlockFileSet Type="BlockSrcs" Name="scalar_float_division"/>
+  <BlockFileSet Type="BlockSrcs" Name="ephsilon_mult"/>
+</GenRun>

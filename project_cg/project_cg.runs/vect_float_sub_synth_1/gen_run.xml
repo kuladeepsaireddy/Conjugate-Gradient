@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="vect_float_sub_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1497430628">
+  <File Type="RDS-DCP" Name="vect_float_sub.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/vect_float_sub_synth_1/constrs_in.xml"/>
+  <File Type="RDS-UTIL-PB" Name="vect_float_sub_utilization_synth.pb"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/vect_float_sub_synth_1/sources.xml"/>
+  <File Type="RDS-PROPCONSTRS" Name="vect_float_sub_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="vect_float_sub.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/vect_float_sub_synth_1/vect_float_sub_synth_1.psg"/>
+  <File Type="RDS-RDS" Name="vect_float_sub.vds"/>
+  <File Type="RDS-UTIL" Name="vect_float_sub_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="vect_float_sub_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="vect_float_sub_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vect_float_sub">
+    <File Path="$PSRCDIR/sources_1/ip/vect_float_sub/vect_float_sub.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="vect_float_sub"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vect_float_sub">
+    <File Path="$PSRCDIR/sources_1/ip/vect_float_sub/vect_float_sub.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="vect_float_sub"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
