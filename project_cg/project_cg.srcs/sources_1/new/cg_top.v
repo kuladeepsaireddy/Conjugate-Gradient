@@ -4,10 +4,10 @@
 `define N 2**`i
 module cg_top(
 input wire clk,
-input wire [(32*`N)-1:0] b,
-input wire [(32*`N)-1:0] A,
+input wire [31:0] b,
+input wire [31:0] A,
 input wire i_valid,
-output reg [(32*`N)-1:0] final_solution,
+output reg [31:0] final_solution,
 output o_ready,
 input wire [31:0] epsilon
  );
