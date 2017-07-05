@@ -54,14 +54,14 @@
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
 COMPONENT fifo_matrix_A
   PORT (
-    clk : IN STD_LOGIC;
-    srst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(1023 DOWNTO 0);
-    wr_en : IN STD_LOGIC;
-    rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(1023 DOWNTO 0);
-    full : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC
+    s_aclk : IN STD_LOGIC;
+    s_aresetn : IN STD_LOGIC;
+    s_axis_tvalid : IN STD_LOGIC;
+    s_axis_tready : OUT STD_LOGIC;
+    s_axis_tdata : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+    m_axis_tvalid : OUT STD_LOGIC;
+    m_axis_tready : IN STD_LOGIC;
+    m_axis_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -72,14 +72,14 @@ END COMPONENT;
 ------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
 your_instance_name : fifo_matrix_A
   PORT MAP (
-    clk => clk,
-    srst => srst,
-    din => din,
-    wr_en => wr_en,
-    rd_en => rd_en,
-    dout => dout,
-    full => full,
-    empty => empty
+    s_aclk => s_aclk,
+    s_aresetn => s_aresetn,
+    s_axis_tvalid => s_axis_tvalid,
+    s_axis_tready => s_axis_tready,
+    s_axis_tdata => s_axis_tdata,
+    m_axis_tvalid => m_axis_tvalid,
+    m_axis_tready => m_axis_tready,
+    m_axis_tdata => m_axis_tdata
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

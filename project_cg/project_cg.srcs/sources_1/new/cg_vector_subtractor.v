@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+
 `define i 1
 `define N 2**`i
 module cg_vector_subtractor(
@@ -53,7 +53,7 @@ end
     
 vect_float_sub vect_sub (
       .aclk(clk),                                  // input wire aclk
-      .s_axis_a_tvalid(i_valid_vect),            // input wire s_axis_a_tvalid
+      .s_axis_a_tvalid(i_valid_vect_1),            // input wire s_axis_a_tvalid
       .s_axis_a_tready(o_ready_1),            // output wire s_axis_a_tready
       .s_axis_a_tdata(i_data_1),              // input wire [31 : 0] s_axis_a_tdata
       .s_axis_b_tvalid(i_valid_vect_2),            // input wire s_axis_b_tvalid

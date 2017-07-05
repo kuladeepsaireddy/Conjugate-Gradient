@@ -7,7 +7,7 @@ input [(32*`N)-1:0] i_data_vect,
 input i_valid_vect,
 input i_valid_scalar,
 
-input [32:0] i_data_scalar,    
+input [31:0] i_data_scalar,    
 output reg  [(32*`N)-1:0] o_data,
 input i_ready,
 output reg o_valid,
@@ -45,6 +45,7 @@ always@(posedge clk)
  end 
 end 
 my_mult  scalar_mult_instance(
+        .clk(clk),
        .i_data_1(i_data_1),
        .i_data_2(i_data_2),
        .o_data(result),

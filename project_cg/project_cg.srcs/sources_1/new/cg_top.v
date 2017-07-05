@@ -1,14 +1,15 @@
 `timescale 1ns / 1ps
 
-`define i 2
+`define i 1
 `define N 2**`i
 module cg_top(
-input clk,
-input [(32*`N)-1:0] b,
-input [(32*`N)-1:0] A,
-input i_valid,
+input wire clk,
+input wire [(32*`N)-1:0] b,
+input wire [(32*`N)-1:0] A,
+input wire i_valid,
 output reg [(32*`N)-1:0] final_solution,
-input[31:0] epsilon
+output o_ready,
+input wire [31:0] epsilon
  );
 	
 reg [(32*`N)-1:0] r;
@@ -20,145 +21,24 @@ reg [31:0] delta_new;
 integer i=0;
 reg[31:0] beta;
 
-/*  
-initial
- begin 
-   state<=idle;
- end 
-reg [1:0] state;
-localparam IDLE = 'd0,
-           PROC = 'd1,
-		   PROC_2 = 'd2;
-		 
-  
-always@(posedge clk)
- begin
-         
-      case(state)
-        IDLE:begin
-		  if(!empty & main_o_ready_1 & main_o_ready_2)
-		     begin
-			   rd_en<=1'b1;
-		      vect_A<=dout;
-		      vect_B<=d;
-              main_i_valid_1<=1'b1;
-              main_i_valid_2<=1'b1;	
-             i_ready_result<=1'b1;			  
-             end  		 
-		  if(o_valid_result) 
-		    begin
-			 q[32*i+:32]<=main_o_data
-			 i<=i+1
-			 if(i==`N)
-			  begin
-	            state<=PROC; 		  
-   			  end
-			end
-		end
-		
-		PROC:begin
-		    rd_en<=1'b1;
-		    vect_A<=q;
-		    vect_B<=d;
-            main_i_valid_1<=1'b1;
-            main_i_valid_2<=1'b1;	
-            i_ready_result<=1'b1;	 
-		   if(o_valid_result & o_ready_1_division& o_ready_2_division)
-             begin 
-			  i_data_1_division<=delta_new; 	
-              i_data_2_division<=main_o_data;
-              i_valid_1_division<=1;
-			  i_valid_2_division<=1;
-			  if(o_valid_result_division)
-			   state<=PROC_2
-             end		
-		
-		
-		end
-		
-       PROC_2:begin
-              if(o_ready_1_mult&o_ready_2_mult)  
-               begin			  
-               i_data_vect_mult<=d;
-               i_data_scalar_mult<=o_data_division;
-			   i_valid_vect_mult<=1'b1;
-			   i_valid_scalar_mult<=1'b1;
-			   i_ready_mult<=1'b1;
-			   end
-			  if(o_valid_mult)
-               begin
-                  i_vect_1_add<=x;
-				  i_vect_2_add<=o_data_mult;
-                  i_valid_vect_1_add<=1'b1;
-				  i_valid_vect_2_add<=1'b1;
-	  		   end
-
-
-       end	   
- 	  
- end
-
-*/
-
-
-
 reg [3:0] sel_1;
 reg [3:0] sel_2;
-/*
-always@(*)
- begin
-  if(sel_1=='h0)
-   begin 
-     vect_A<=dout;
-	 rd_en<=1'b1;
-   end
-  else if(sel_1=='h1)
-   begin
-     vect_A<=r;
 
-   end
-  else if(sel_1=='h2)
-    begin
-     vect_A<=b;
-    end
-  else if(sel_1=='h3)
-    begin
-     vect_A<=d;
-    end	
- end
- 
-always@(*)
-  begin
-  if(sel_2=='h0)
-   begin 
-     vect_B<=q;
-   end
-  else if(sel_2=='h1)
-   begin
-     vect_B<=r;
-   end
-  else if(sel_2=='h2)
-    begin
-     vect_B<=b;
-    end
-  else if(sel_2=='h3)
-    begin
-     vect_B<=d;
-    end	
- end*/
+
  
 //assign vect_A=(sel_1=='h0) ? dout:(sel_1=='h1)? r:(sel_1=='h2)? b:d;
 //assign vect_B=(sel_2=='h0) ? q:(sel_2=='h1)? r:(sel_2=='h2)? b:d;
 integer count =0;
 reg rd_en;
-wire [1023:0]dout;
+wire [63:0]dout;
 wire full;
 wire empty;
 
-
-wire [(32*`N)-1:0]vect_A=(sel_1=='h0) ? dout:(sel_1=='h1)? r:(sel_1=='h2)? b:d;
-wire [(32*`N)-1:0]vect_B=(sel_2=='h0) ? q:(sel_2=='h1)? r:(sel_2=='h2)? b:d;
-wire [(32*`N)-1:0]main_o_data;
+reg [(32*`N)-1:0]vect_A;
+reg [(32*`N)-1:0]vect_B;
+//wire [(32*`N)-1:0]vect_A=(sel_1=='h0) ? dout:(sel_1=='h1)? r:(sel_1=='h2)? b:d;
+//wire [(32*`N)-1:0]vect_B =(sel_2=='h0) ? q:(sel_2=='h1)? r:(sel_2=='h2)? b:d;
+wire [31:0]main_o_data;
 reg main_i_valid_1;
 reg main_i_valid_2;
 wire main_o_ready_1;
@@ -257,7 +137,7 @@ wire s_axis_b_tready_2;
 wire m_axis_result_tvalid_2;
 wire [31:0] tolerance;
 
-
+/*
 initial 
   begin	
   
@@ -265,6 +145,7 @@ initial
 	r<=b;
 	sel_1<='h2;
 	sel_2<='h2;
+	
 	//vect_A<=r;
 	//vect_B<=r;
 	main_i_valid_1<=1'b1;
@@ -277,17 +158,85 @@ initial
 	delta_new<=delta_0;
 	
   end
+ */
+always@(posedge clk)
+ begin
+  if(sel_1=='h0)
+   begin 
+     vect_A<=dout;
+	 rd_en<=1'b1;
+   end
+  else if(sel_1=='h1)
+   begin
+     vect_A<=r;
+
+   end
+  else if(sel_1=='h2)
+    begin
+     vect_A<=b;
+    end
+  else if(sel_1=='h3)
+    begin
+     vect_A<=d;
+    end	
+ end
+ 
+always@(posedge clk)
+  begin
+  if(sel_2=='h0)
+   begin 
+     vect_B<=q;
+   end
+  else if(sel_2=='h1)
+   begin
+     vect_B<=r;
+   end
+  else if(sel_2=='h2)
+    begin
+     vect_B<=b;
+    end
+  else if(sel_2=='h3)
+    begin
+     vect_B<=d;
+    end	
+ end 
   
-  
+ reg count_1;
+ initial
+ begin
+  count_1<=0;
+ end
+ 
  always@(posedge clk)
  begin
-if(delta_new< tolerance)
+ if(count_1==0)
+   begin
+    d<=b;
+	r<=b;
+	sel_1<='h1;
+	sel_2<='h1;
+	 if(main_o_ready_1& main_o_ready_2)
+	  begin
+	    main_i_valid_1<=1'b1;
+		main_i_valid_2<=1'b1;
+		
+		if(o_valid_result)
+			begin
+            i_ready_result<=1'b1;			
+			delta_0<=main_o_data;
+			end
+		delta_new<=delta_0;
+		count_1<=1;
+	  end
+   end
+if(delta_new< tolerance & count_1==1 )
  begin
    if(count<`N & main_o_ready_1& main_o_ready_2 )
     begin
      sel_1<=0;
+	 //rd_en<=1'b1;
      sel_2<=3;
-     main_i_valid_1<=1'b1;
+     main_i_valid_1<=fifo_o_valid;
      main_i_valid_2<=1'b1;
      count<=count+1;
      i_ready_result<=1'b1;	 
@@ -366,8 +315,8 @@ if(delta_new< tolerance)
 	   delta_0<=delta_new;
 	   //vect_A<=r;
 	   //vect_B<=r;
-	   sel_1<='h2;
-	   sel_2<='h2;
+	   sel_1<='h1;
+	   sel_2<='h1;
 	   main_i_valid_1<=1'b1;
 	   main_i_valid_2<=1'b1;
 	   i_ready_result<=1'b1;
@@ -420,12 +369,14 @@ if(delta_new< tolerance)
 	  end
 	  
  end
-else
- begin
-  final_solution<=x;
- end
-end
+////
+	else
+	  begin
+       final_solution<=x;
+	   count_1<=0;
+      end
 
+end
 
 vector_by_vector vect_by_vect_inst(
   .clk(clk),
@@ -573,18 +524,30 @@ cg_scalar_mult scalar_mult_instnce_3(
 //wire [1023:0] b;
 //wire i_valid;
 
+
+/*
 fifo_matrix_A matrix_fifo (
   .clk(clk),      // input wire clk
-  .srst(1'b0),    // input wire srst
-  .din(A),      // input wire [1023 : 0] din
+  .rst(1'b0),      // input wire rst
+  .din(A),      // input wire [63 : 0] din
   .wr_en(i_valid),  // input wire wr_en
   .rd_en(rd_en),  // input wire rd_en
-  .dout(dout),    // output wire [1023 : 0] dout
+  .dout(dout),    // output wire [63 : 0] dout
   .full(full),    // output wire full
   .empty(empty)  // output wire empty
 );
-
-
+*/
+wire fifo_o_valid;
+fifo_matrix_A matrix_fifo (
+  .s_aclk(clk),                // input wire s_aclk
+  .s_aresetn(1'b1),          // input wire s_aresetn
+  .s_axis_tvalid(i_valid),  // input wire s_axis_tvalid
+  .s_axis_tready(o_ready),  // output wire s_axis_tready
+  .s_axis_tdata(A),    // input wire [63 : 0] s_axis_tdata
+  .m_axis_tvalid(fifo_o_valid),  // output wire m_axis_tvalid
+  .m_axis_tready(rd_en),  // input wire m_axis_tready
+  .m_axis_tdata(dout)    // output wire [63 : 0] m_axis_tdata
+);
 
 ephsilon_mult square_eph(
   .aclk(clk),                                  // input wire aclk

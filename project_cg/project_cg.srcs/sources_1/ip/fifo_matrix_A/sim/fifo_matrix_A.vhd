@@ -58,14 +58,14 @@ USE fifo_generator_v13_0_1.fifo_generator_v13_0_1;
 
 ENTITY fifo_matrix_A IS
   PORT (
-    clk : IN STD_LOGIC;
-    srst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(1023 DOWNTO 0);
-    wr_en : IN STD_LOGIC;
-    rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(1023 DOWNTO 0);
-    full : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC
+    s_aclk : IN STD_LOGIC;
+    s_aresetn : IN STD_LOGIC;
+    s_axis_tvalid : IN STD_LOGIC;
+    s_axis_tready : OUT STD_LOGIC;
+    s_axis_tdata : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+    m_axis_tvalid : OUT STD_LOGIC;
+    m_axis_tready : IN STD_LOGIC;
+    m_axis_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
   );
 END fifo_matrix_A;
 
@@ -287,7 +287,7 @@ ARCHITECTURE fifo_matrix_A_arch OF fifo_matrix_A IS
       wr_rst : IN STD_LOGIC;
       rd_clk : IN STD_LOGIC;
       rd_rst : IN STD_LOGIC;
-      din : IN STD_LOGIC_VECTOR(1023 DOWNTO 0);
+      din : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
       wr_en : IN STD_LOGIC;
       rd_en : IN STD_LOGIC;
       prog_empty_thresh : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -300,7 +300,7 @@ ARCHITECTURE fifo_matrix_A_arch OF fifo_matrix_A IS
       injectdbiterr : IN STD_LOGIC;
       injectsbiterr : IN STD_LOGIC;
       sleep : IN STD_LOGIC;
-      dout : OUT STD_LOGIC_VECTOR(1023 DOWNTO 0);
+      dout : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
       full : OUT STD_LOGIC;
       almost_full : OUT STD_LOGIC;
       wr_ack : OUT STD_LOGIC;
@@ -415,22 +415,22 @@ ARCHITECTURE fifo_matrix_A_arch OF fifo_matrix_A IS
       m_axi_rready : OUT STD_LOGIC;
       s_axis_tvalid : IN STD_LOGIC;
       s_axis_tready : OUT STD_LOGIC;
-      s_axis_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      s_axis_tstrb : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      s_axis_tkeep : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      s_axis_tdata : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+      s_axis_tstrb : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+      s_axis_tkeep : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axis_tlast : IN STD_LOGIC;
       s_axis_tid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axis_tdest : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      s_axis_tuser : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      s_axis_tuser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_tvalid : OUT STD_LOGIC;
       m_axis_tready : IN STD_LOGIC;
-      m_axis_tdata : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-      m_axis_tstrb : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-      m_axis_tkeep : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+      m_axis_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
+      m_axis_tstrb : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+      m_axis_tkeep : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       m_axis_tlast : OUT STD_LOGIC;
       m_axis_tid : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_tdest : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-      m_axis_tuser : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      m_axis_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       axi_aw_injectsbiterr : IN STD_LOGIC;
       axi_aw_injectdbiterr : IN STD_LOGIC;
       axi_aw_prog_full_thresh : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -512,13 +512,14 @@ ARCHITECTURE fifo_matrix_A_arch OF fifo_matrix_A IS
     );
   END COMPONENT fifo_generator_v13_0_1;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 core_clk CLK";
-  ATTRIBUTE X_INTERFACE_INFO OF din: SIGNAL IS "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA";
-  ATTRIBUTE X_INTERFACE_INFO OF wr_en: SIGNAL IS "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN";
-  ATTRIBUTE X_INTERFACE_INFO OF rd_en: SIGNAL IS "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN";
-  ATTRIBUTE X_INTERFACE_INFO OF dout: SIGNAL IS "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA";
-  ATTRIBUTE X_INTERFACE_INFO OF full: SIGNAL IS "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL";
-  ATTRIBUTE X_INTERFACE_INFO OF empty: SIGNAL IS "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 slave_aclk CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF s_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 slave_aresetn RST";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axis_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS TVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axis_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS TREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axis_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS TDATA";
+  ATTRIBUTE X_INTERFACE_INFO OF m_axis_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS TVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF m_axis_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS TREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF m_axis_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS TDATA";
 BEGIN
   U0 : fifo_generator_v13_0_1
     GENERIC MAP (
@@ -526,12 +527,12 @@ BEGIN
       C_COUNT_TYPE => 0,
       C_DATA_COUNT_WIDTH => 10,
       C_DEFAULT_VALUE => "BlankString",
-      C_DIN_WIDTH => 1024,
+      C_DIN_WIDTH => 64,
       C_DOUT_RST_VAL => "0",
-      C_DOUT_WIDTH => 1024,
+      C_DOUT_WIDTH => 64,
       C_ENABLE_RLOCS => 0,
       C_FAMILY => "zynq",
-      C_FULL_FLAGS_RST_VAL => 0,
+      C_FULL_FLAGS_RST_VAL => 1,
       C_HAS_ALMOST_EMPTY => 0,
       C_HAS_ALMOST_FULL => 0,
       C_HAS_BACKUP => 0,
@@ -541,8 +542,8 @@ BEGIN
       C_HAS_OVERFLOW => 0,
       C_HAS_RD_DATA_COUNT => 0,
       C_HAS_RD_RST => 0,
-      C_HAS_RST => 0,
-      C_HAS_SRST => 1,
+      C_HAS_RST => 1,
+      C_HAS_SRST => 0,
       C_HAS_UNDERFLOW => 0,
       C_HAS_VALID => 0,
       C_HAS_WR_ACK => 0,
@@ -556,7 +557,7 @@ BEGIN
       C_OVERFLOW_LOW => 0,
       C_PRELOAD_LATENCY => 1,
       C_PRELOAD_REGS => 0,
-      C_PRIM_FIFO_TYPE => "1kx36",
+      C_PRIM_FIFO_TYPE => "4kx4",
       C_PROG_EMPTY_THRESH_ASSERT_VAL => 2,
       C_PROG_EMPTY_THRESH_NEGATE_VAL => 3,
       C_PROG_EMPTY_TYPE => 0,
@@ -587,7 +588,7 @@ BEGIN
       C_EN_SAFETY_CKT => 0,
       C_ERROR_INJECTION_TYPE => 0,
       C_SYNCHRONIZER_STAGE => 2,
-      C_INTERFACE_TYPE => 0,
+      C_INTERFACE_TYPE => 1,
       C_AXI_TYPE => 1,
       C_HAS_AXI_WR_CHANNEL => 1,
       C_HAS_AXI_RD_CHANNEL => 1,
@@ -616,17 +617,17 @@ BEGIN
       C_HAS_AXIS_TDATA => 1,
       C_HAS_AXIS_TID => 0,
       C_HAS_AXIS_TDEST => 0,
-      C_HAS_AXIS_TUSER => 1,
+      C_HAS_AXIS_TUSER => 0,
       C_HAS_AXIS_TREADY => 1,
       C_HAS_AXIS_TLAST => 0,
       C_HAS_AXIS_TSTRB => 0,
       C_HAS_AXIS_TKEEP => 0,
-      C_AXIS_TDATA_WIDTH => 8,
+      C_AXIS_TDATA_WIDTH => 64,
       C_AXIS_TID_WIDTH => 1,
       C_AXIS_TDEST_WIDTH => 1,
-      C_AXIS_TUSER_WIDTH => 4,
-      C_AXIS_TSTRB_WIDTH => 1,
-      C_AXIS_TKEEP_WIDTH => 1,
+      C_AXIS_TUSER_WIDTH => 1,
+      C_AXIS_TSTRB_WIDTH => 8,
+      C_AXIS_TKEEP_WIDTH => 8,
       C_WACH_TYPE => 0,
       C_WDCH_TYPE => 0,
       C_WRCH_TYPE => 0,
@@ -650,7 +651,7 @@ BEGIN
       C_PRIM_FIFO_TYPE_WRCH => "512x36",
       C_PRIM_FIFO_TYPE_RACH => "512x36",
       C_PRIM_FIFO_TYPE_RDCH => "1kx36",
-      C_PRIM_FIFO_TYPE_AXIS => "1kx18",
+      C_PRIM_FIFO_TYPE_AXIS => "1kx36",
       C_USE_ECC_WACH => 0,
       C_USE_ECC_WDCH => 0,
       C_USE_ECC_WRCH => 0,
@@ -668,7 +669,7 @@ BEGIN
       C_DIN_WIDTH_WRCH => 2,
       C_DIN_WIDTH_RACH => 32,
       C_DIN_WIDTH_RDCH => 64,
-      C_DIN_WIDTH_AXIS => 1,
+      C_DIN_WIDTH_AXIS => 64,
       C_WR_DEPTH_WACH => 16,
       C_WR_DEPTH_WDCH => 1024,
       C_WR_DEPTH_WRCH => 16,
@@ -699,10 +700,10 @@ BEGIN
       C_PROG_FULL_TYPE_RACH => 0,
       C_PROG_FULL_TYPE_RDCH => 0,
       C_PROG_FULL_TYPE_AXIS => 0,
-      C_PROG_FULL_THRESH_ASSERT_VAL_WACH => 1023,
+      C_PROG_FULL_THRESH_ASSERT_VAL_WACH => 15,
       C_PROG_FULL_THRESH_ASSERT_VAL_WDCH => 1023,
-      C_PROG_FULL_THRESH_ASSERT_VAL_WRCH => 1023,
-      C_PROG_FULL_THRESH_ASSERT_VAL_RACH => 1023,
+      C_PROG_FULL_THRESH_ASSERT_VAL_WRCH => 15,
+      C_PROG_FULL_THRESH_ASSERT_VAL_RACH => 15,
       C_PROG_FULL_THRESH_ASSERT_VAL_RDCH => 1023,
       C_PROG_FULL_THRESH_ASSERT_VAL_AXIS => 1023,
       C_PROG_EMPTY_TYPE_WACH => 0,
@@ -711,10 +712,10 @@ BEGIN
       C_PROG_EMPTY_TYPE_RACH => 0,
       C_PROG_EMPTY_TYPE_RDCH => 0,
       C_PROG_EMPTY_TYPE_AXIS => 0,
-      C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH => 1022,
+      C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH => 14,
       C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH => 1022,
-      C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH => 1022,
-      C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH => 1022,
+      C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH => 14,
+      C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH => 14,
       C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH => 1022,
       C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS => 1022,
       C_REG_SLICE_MODE_WACH => 0,
@@ -727,16 +728,16 @@ BEGIN
     PORT MAP (
       backup => '0',
       backup_marker => '0',
-      clk => clk,
+      clk => '0',
       rst => '0',
-      srst => srst,
+      srst => '0',
       wr_clk => '0',
       wr_rst => '0',
       rd_clk => '0',
       rd_rst => '0',
-      din => din,
-      wr_en => wr_en,
-      rd_en => rd_en,
+      din => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 64)),
+      wr_en => '0',
+      rd_en => '0',
       prog_empty_thresh => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 10)),
       prog_empty_thresh_assert => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 10)),
       prog_empty_thresh_negate => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 10)),
@@ -747,12 +748,9 @@ BEGIN
       injectdbiterr => '0',
       injectsbiterr => '0',
       sleep => '0',
-      dout => dout,
-      full => full,
-      empty => empty,
       m_aclk => '0',
-      s_aclk => '0',
-      s_aresetn => '0',
+      s_aclk => s_aclk,
+      s_aresetn => s_aresetn,
       m_aclk_en => '0',
       s_aclk_en => '0',
       s_axi_awid => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
@@ -800,15 +798,18 @@ BEGIN
       m_axi_rlast => '0',
       m_axi_ruser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       m_axi_rvalid => '0',
-      s_axis_tvalid => '0',
-      s_axis_tdata => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 8)),
-      s_axis_tstrb => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
-      s_axis_tkeep => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
+      s_axis_tvalid => s_axis_tvalid,
+      s_axis_tready => s_axis_tready,
+      s_axis_tdata => s_axis_tdata,
+      s_axis_tstrb => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 8)),
+      s_axis_tkeep => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 8)),
       s_axis_tlast => '0',
       s_axis_tid => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_tdest => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
-      s_axis_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      m_axis_tready => '0',
+      s_axis_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
+      m_axis_tvalid => m_axis_tvalid,
+      m_axis_tready => m_axis_tready,
+      m_axis_tdata => m_axis_tdata,
       axi_aw_injectsbiterr => '0',
       axi_aw_injectdbiterr => '0',
       axi_aw_prog_full_thresh => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
